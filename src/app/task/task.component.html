@@ -1,0 +1,56 @@
+
+<div class="container">
+  <mat-card>
+    <!--<div class="container1">-->
+      <!--<div>-->
+        <!--<span style="margin-left: 47%">Add New</span>-->
+      <!--</div>-->
+      <!--<div>-->
+      <!--<div>-->
+        <!--<img src="./assets/left-arrow.png" style="width: 30px;margin-left: 20px">-->
+        <!--<img src="./assets/right-arrow.png" style="width: 30px;margin-left: 20px">-->
+        <!--<img src="./assets/close.png" style="width: 22px;margin-left: 20px;margin-bottom: 4px">-->
+        <!--<img src="./assets/home.png" style="width: 30px;margin-left: 20px">-->
+        <!--<input type="text" class="inputCss">-->
+        <!--<input type="text" style="margin-left: 40px;height: 22px" placeholder="Search">-->
+        <!--<i class="material-icons" style="position: absolute;right: 60px;margin-top: 14px">search</i>-->
+      <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <div class="container2"></div>
+
+    <div class="container3">
+      <div class="userClass">User Record
+        <button mat-raised-button color="primary" mat-button style="margin-left: 50%;margin-bottom: 10px" (click)="addNew()">Add New</button>
+      </div>
+
+      <div>
+        <table style="width:70%;margin-top: 26px;margin-bottom: 30px;margin-left: 175px;border-collapse: collapse" border=2px solid black>
+          <tr>
+            <th style='background-color:#f3f3f3;color:black'>Avator</th>
+            <th style='background-color:#f3f3f3;color:black' >Name</th>
+            <th style='background-color:#f3f3f3;color:black' >Email</th>
+            <th style='background-color:#f3f3f3;color:black' >Experience</th>
+            <th style='background-color:#f3f3f3;color:black' >Remove</th>
+          </tr>
+
+          <tr *ngFor="let order of CurrentEmpls; let i = index;">
+            <td style="text-align: center"><img style="width: 50px;height: 50px" src="{{'data:image/png;base64,' +order.image}}"/></td>
+            <td style="text-align: center">{{ order.email }}</td>
+            <td style="text-align: center">{{ order.fullName }}</td>
+            <td style="text-align: center">{{getEmpExp(order.dateofJoining,order.dateofLeaving,order.check)}}</td>
+            <td style="text-align: center">
+              <span style="display: flex;justify-content: space-around">
+                <button class="btn btn-danger" (click)="deleteEmp(i)" style="display: flex;align-items: center;">
+                <i class="material-icons">close</i>Remove</button>
+              </span>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+
+    </div>
+  </mat-card>
+</div>

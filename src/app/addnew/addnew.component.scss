@@ -1,0 +1,25 @@
+.imageDiv {
+  display: block;
+  height: 153px;
+  width: 200px;
+
+}
+
+.imageDiv:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.saveBtn{
+  margin-left: 188px;
+  margin-top: 22px;
+  margin-bottom: 20px;
+}
+.newrecord{
+  font-size: larger;
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+.allDivs{
+  margin-left: 5% ;
+}
+
